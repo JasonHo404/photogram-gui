@@ -16,6 +16,7 @@ class User < ApplicationRecord
     :presence => true,
     :uniqueness => { :case_sensitive => false },
   })
+  #has_many: "own_photos", class_name: "Photo", foriegn_key: "owner_id"
 
   def comments
     my_id = self.id

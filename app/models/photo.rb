@@ -13,7 +13,8 @@
 #
 
 class Photo < ApplicationRecord
-  validates(:poster, { :presence => true })
+  validates(:poster, { :presence => true }) 
+  #belongs_to :owner, class_name: "User"
 
   def poster
     my_owner_id = self.owner_id
